@@ -14,39 +14,38 @@ abstract class Locations {
     }
     render()
     {		
-        var loc = document.createElement("div");
-            loc.classList.add("loc");
-            loc.classList.add("col-lg-4");
-            loc.classList.add("col-md-6");
-            loc.classList.add("col-sm-6");
-            loc.classList.add("col-xs-12");
-            loc.classList.add("text-center");
+        var x = document.createElement("div");
+            x.classList.add("col-lg-4");
+            x.classList.add("col-md-6");
+            x.classList.add("col-sm-12");
+            x.classList.add("col-xs-12");
+            x.classList.add("text-center");
 
         var row = document.getElementById("row1");
-            row.appendChild(loc); 	
+            row.appendChild(x); 	
          
         var name = document.createElement("h2");
         var name_name = document.createTextNode(this.name);
              name.appendChild(name_name);
-             loc.appendChild(name);
+             x.appendChild(name);
     
         var img = document.createElement("img") 
             img.setAttribute("src", this.img);
             img.setAttribute("width", "300");
             img.setAttribute("height", "220");
-            loc.appendChild(img); 	
+            x.appendChild(img); 	
     
         var adrs = document.createElement("p");
         var adrs_text = document.createTextNode(this.address  + this.ZIP + ", " + this.city);
              adrs.appendChild(adrs_text);
-             loc.appendChild(adrs);
+             x.appendChild(adrs);
 
         var hr = document.createElement("hr");
-             loc.appendChild(hr);	 
+             x.appendChild(hr);	 
     
-            var loc2 = loc.cloneNode(true);
+            var x2 = x.cloneNode(true);
             var row2 = document.getElementById("row2");
-            row2.appendChild(loc2);
+            row2.appendChild(x2);
 
             
     }
@@ -68,52 +67,51 @@ constructor(name:string, city:string, address:string, ZIP:string, img:any, age:n
 
 render(){	
 		
-var	loc = document.createElement("div");
- 	loc.classList.add("loc");
-     loc.classList.add("col-lg-4");
-     loc.classList.add("col-md-6");
-     loc.classList.add("col-sm-6");
- 	loc.classList.add("col-xs-12"); 
-    loc.classList.add("text-center");
+var	x = document.createElement("div");
+    x.classList.add("col-lg-4");
+    x.classList.add("col-md-6");
+    x.classList.add("col-sm-12");
+ 	x.classList.add("col-xs-12"); 
+    x.classList.add("text-center");
 
 var row = document.getElementById("row1");
- 	row.appendChild(loc);	
+ 	row.appendChild(x);	
  	
  	var name = document.createElement("h2");
  	var name_name = document.createTextNode(this.name);
 	 	name.appendChild(name_name);
-	 	loc.appendChild(name);
+	 	x.appendChild(name);
 
     var img = document.createElement("img") 
 	 	img.setAttribute("src", this.img);
 	    img.setAttribute("width", "300");
 	    img.setAttribute("height", "220");
-	 	loc.appendChild(img);	 
+	 	x.appendChild(img);	 
 
 
 	var adrs = document.createElement("p");
  	var adrs_text = document.createTextNode( this.address + ", "+ this.ZIP + " " +this.city );
 	 	adrs.appendChild(adrs_text);
-	 	loc.appendChild(adrs);
+	 	x.appendChild(adrs);
 
  	var old = document.createElement("p");
  	var old_text = document.createTextNode("this place is : " + this.age + " years old");
 	 	old.appendChild(old_text);
-	 	loc.appendChild(old);
+	 	x.appendChild(old);
 
  	var ent = document.createElement("p");
  	var ent_text = document.createTextNode("free entry : " + this.freeentry);
 	 	ent.appendChild(ent_text);
-	 	loc.appendChild(ent);
+	 	x.appendChild(ent);
 
  	
 	 	var hr = document.createElement("hr");
-	 	loc.appendChild(hr);
+	 	x.appendChild(hr);
 
 
-	var loc2 = loc.cloneNode(true);
+	var x2 = x.cloneNode(true);
     var row2 = document.getElementById("row4");
- 	    row2.appendChild(loc2);
+ 	    row2.appendChild(x2);
 
 	
 	
@@ -150,60 +148,59 @@ class Resturants extends Locations{
     
     }
     render(){
-    var loc = document.createElement("div");
-        loc.classList.add("loc");
-        loc.classList.add("col-lg-4");
-        loc.classList.add("col-md-6");
-        loc.classList.add("col-sm-6");
-        loc.classList.add("col-xs-12");
-        loc.classList.add("text-center");
+    var x = document.createElement("div");
+        x.classList.add("col-lg-4");
+        x.classList.add("col-md-6");
+        x.classList.add("col-sm-12");
+        x.classList.add("col-xs-12");
+        x.classList.add("text-center");
     var row = document.getElementById("row1");
-        row.appendChild(loc); 	
+        row.appendChild(x); 	
          
          var name = document.createElement("h2");
          var name_name = document.createTextNode(this.name);
              name.appendChild(name_name);
-             loc.appendChild(name);
+             x.appendChild(name);
     
         var img = document.createElement("img") 
             img.setAttribute("src", this.img);
             img.setAttribute("width", "300");
             img.setAttribute("height", "220");
-            loc.appendChild(img);
+            x.appendChild(img);
     
      
          var adrs = document.createElement("p");
          var adrs_text = document.createTextNode(this.address + " , " + this.ZIP + " " + this.city);
              adrs.appendChild(adrs_text);
-             loc.appendChild(adrs);
+             x.appendChild(adrs);
     
          var visitUs = document.createElement("p");
          var visitUs_text = document.createTextNode( this.type );
              visitUs.appendChild(visitUs_text);
-             loc.appendChild(visitUs);
+             x.appendChild(visitUs);
     
     
          var contact = document.createElement("span");
          var contact_text = document.createTextNode("Check ");
              contact.appendChild(contact_text);
-             loc.appendChild(contact);
+             x.appendChild(contact);
     
              var link = document.createElement("a") 
              link.setAttribute("href", this.webAddress);
              var link_text = document.createTextNode("our Website ");
              link.appendChild(link_text);
-             loc.appendChild(link);
+             x.appendChild(link);
              
              var call = document.createElement("p");
              var call_text = document.createTextNode( "Call us :  "+ this.telephoneNumber);
              call.appendChild(call_text);
-             loc.appendChild(call);
+             x.appendChild(call);
              var hr = document.createElement("hr");
-             loc.appendChild(hr);
+             x.appendChild(hr);
     
-             var loc2 = loc.cloneNode(true);
+             var x2 = x.cloneNode(true);
         var row2 = document.getElementById("row3");
-             row2.appendChild(loc2);
+             row2.appendChild(x2);
 
 
     }	
@@ -241,47 +238,46 @@ class Events extends Locations{
     }
     render(){ 
 		
-    var loc = document.createElement("div");
-         loc.classList.add("loc");
-         loc.classList.add("col-lg-4");
-         loc.classList.add("col-md-6");
-         loc.classList.add("col-sm-6");
-         loc.classList.add("col-xs-12"); 
-         loc.classList.add("text-center");
+    var x = document.createElement("div");
+        x.classList.add("col-lg-4");
+        x.classList.add("col-md-6");
+        x.classList.add("col-sm-12");
+        x.classList.add("col-xs-12"); 
+        x.classList.add("text-center");
     var row = document.getElementById("row1");
-         row.appendChild(loc); 	
+         row.appendChild(x); 	
          
          var name = document.createElement("h2");
          var name_name = document.createTextNode(this.name);
              name.appendChild(name_name);
-             loc.appendChild(name);
+             x.appendChild(name);
     
          var img = document.createElement("img") 
              img.setAttribute("src", this.img);
              img.setAttribute("width", "300");
              img.setAttribute("height", "220");
-             loc.appendChild(img);
+             x.appendChild(img);
     
          var dt = document.createElement("p");
-         var dt_text = document.createTextNode("this event will take place on : " + this.eventDate + " at:  " + this.eventTime + " o'clock");
+         var dt_text = document.createTextNode("this event will take place on : " + this.eventDate + " at :  " + this.eventTime + "  o'clock");
              dt.appendChild(dt_text);
-             loc.appendChild(dt);
+             x.appendChild(dt);
     
          var adrs = document.createElement("p");
          var adrs_text = document.createTextNode("  address: " + this.address + ", " + this.ZIP + ", " + this.city);
              adrs.appendChild(adrs_text);
-             loc.appendChild(adrs);
+             x.appendChild(adrs);
     
          var price = document.createElement("p");
          var price_name = document.createTextNode("price: " + this.ticketPrice + " Euro");
              price.appendChild(price_name);
-             loc.appendChild(price);
+             x.appendChild(price);
              var hr = document.createElement("hr");
-             loc.appendChild(hr);
+             x.appendChild(hr);
     
-             var loc2 = loc.cloneNode(true);
+             var x2 = x.cloneNode(true);
         var row2 = document.getElementById("row4");
-             row2.appendChild(loc2);
+             row2.appendChild(x2);
 
              
 	
